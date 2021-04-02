@@ -25,7 +25,8 @@ const images = [
   const imagesListItem = ({url, alt}) => {
       return `
       <li class = "images-list__item">
-          <img class = "image"  src= "${url}"
+          <img class = "image"  
+                src= "${url}"
                 alt= "${alt}">
          
     </li>`;
