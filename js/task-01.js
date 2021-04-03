@@ -19,4 +19,3 @@ const findQuantity = itemEl.forEach(item => {
  
 })
 
-console.log(findQuantity);
