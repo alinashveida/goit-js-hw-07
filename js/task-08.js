@@ -23,7 +23,6 @@ function createBoxes(amount){
         div.classList.add('box');
 
         div.style.backgroundColor = colors[randomizer(colors.length)];
-
         
          
      }
