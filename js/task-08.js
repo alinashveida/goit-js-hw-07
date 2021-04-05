@@ -10,9 +10,11 @@ console.log(destroyBtn);
 const boxes = document.querySelector('#boxes');
 console.log(boxes);
 
-renderBtn.addEventListener('click', createBoxes);
+renderBtn.addEventListener('click', createDiv);
 
-function createBoxes(amount){
+let boxSixe = 30;
+
+function createDiv(amount){
      amount = input.value;
      console.log(amount);
 
@@ -20,45 +22,31 @@ function createBoxes(amount){
         const div = document.createElement('div');
         console.log(div);
         boxes.appendChild(div);
-        div.classList.add('box');
-
-        div.style.backgroundColor = colors[randomizer(colors.length)];
+       
+        div.style.backgroundColor = 
+         `rgb(${Math.floor( Math.random() * 255 )}, ${Math.floor( Math.random() * 255 )}, ${Math.floor( Math.random() * 255 )})`;;
         
-         
+        div.style.width = boxSixe + `px`;
+        div.style.height = boxSixe +`px`;
+
+        boxSixe += 10;
+        
      }
-     const boxesArray = boxes.querySelectorAll('div');
-        console.log(boxesArray);
-
-        // for (let index = 0; index < boxesArray.length; index++) {
-        //     const el = boxesArray[index];
-        //     console.log(el);
-        //     el.style.width += 30 + `px`;
-
-            
-        // }
-
-        boxesArray.forEach((div, index) =>{
-            console.log(index);
-            console.log(div)
-            div.style.width = 30 + `px`;
-            // const divWidth = div.style.width;
-            // div.style.width = divWidth + 10 + `px`;
-        })
+  
      
 }
 
-const colors =["red", "black", "blue", "purple", "green"];
+// const colors =["red", "black", "blue", "purple", "green"];
 
-const randomizer = max => {
-    return Math.floor(Math.random() * max);
-  };
+// const randomizer = max => {
+//     return Math.floor(Math.random() * max);
+//   };
 
 
   destroyBtn.addEventListener('click', ()=>{
     boxes.innerHTML ="";
     // boxes.removeChild(boxes.lastElementChild);
 
-    
   })
 
  
