@@ -37,12 +37,13 @@ function createBoxes(amount){
             
         // }
 
-        // boxesArray.forEach((div, index) =>{
-        //     console.log(index);
-        //     console.log(div)
-        //     div.style.width = 30 + `px`;
-        //     div.style.width = div.style.width + 10 + `px`;
-        // })
+        boxesArray.forEach((div, index) =>{
+            console.log(index);
+            console.log(div)
+            div.style.width = 30 + `px`;
+            // const divWidth = div.style.width;
+            // div.style.width = divWidth + 10 + `px`;
+        })
      
 }
 
